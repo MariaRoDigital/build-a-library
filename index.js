@@ -120,4 +120,26 @@ const speed = new Movie('Speed', 'Jan de Bont', 116);
 const weezer = new CD('Weezer (The Blue Album)', 'Weezer', ['My Name is Jonas', 'No One Else', 'The World Has Turned and Left Me Here', 'Buddy Holly', 'Undone - The Sweater Song', 'Surf Wax America', 'Say It Ain\'t So', 'In The Garage', 'Holiday', 'Only in Dreams']);
 
 // console.log(weezer.songs);
-console.log(weezer.shuffle());
+// console.log(weezer.shuffle());
+
+// constructor(title, director = "Unknown") {
+//   this.title = title;
+//   this.director = director;
+// }
+
+// Makes a new Catalog object using the template, and runs the constructor with no inputs
+class Catalog {
+  constructor() {
+    this._media = []
+  }
+  get media() {
+    return this._media;
+  }
+  addMedia(media) {
+    this._media.push(media);
+  }
+};
+
+const newCatalog = new Catalog();
+newCatalog.addMedia(weezer);
+console.log(newCatalog.media);
